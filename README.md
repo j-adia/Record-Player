@@ -1,5 +1,5 @@
-# Record-Player
-A mini record player, like the title says!
+# Record Player
+A mini record player, just like the title says!
 
 # Key Features
 * Plays music that you import from YouTube (feature in development)
