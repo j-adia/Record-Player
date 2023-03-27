@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.player{
+    background-color: #0f0e0e;
+    width: 450px;
+    height: 260px;
+    position: absolute;
+    transform: translate(-50%, -20%);
+    left: 50%;
+    top: 40%;
+    border: 10px solid rgb(53, 99, 89);
+    box-shadow: 2px 8px 6.5px -3px rgba(0,0,0,0.5);
+    border-radius: 8px;
+}
+
+.record{
+    height: 230px;
+    width: 230px;
+    border: solid 3px #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 9px rgba(0,0,0,3);
+}
+
+.record::before, .record::after{
+    position: absolute;
+    content:'';
+    border: 5px solid transparent;
+    border-top-color: #1d1a1a;
+    border-bottom-color: #1d1a1a;
+    border-radius: 50%;
+}
+.record::before {
+    height: 180px;
+    width: 180px;
+}
+
+.record::after{
+    height: 150px;
+    width: 150px;
+}
+
+.spindle{
+    background-color: #0f0e0e;
+    height: 15px;
+    width: 15px;
+    border: 40px solid rgb(163, 30, 7);
+    border-radius: 50%;
+}
+
+.tone-arm{
+    background-color: rgb(87, 77, 65);
+    height: 200px;
+    width: 10px;
+    position: relative;
+    left: 65%;
+    top: 20px;
+}
+
+.tone-arm::after{
+    content:'';
+    position: absolute;
+    height: 30px;
+    width: 12px;
+    border-top: 18px solid rgb(221, 212, 212);
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transform: rotate(56deg);
+    bottom: -46px;
+    right: 29px;
+}
+
+.rotator{
+    background-color:  rgb(87, 77, 65);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -15px; 
+    bottom: 162px;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.needle-point{
+    background-color: rgb(87, 77, 65);
+    height: 10px;
+    width: 30px;
+    position: absolute;
+    bottom: -11px;
+    right: -1px;
+    transform: rotate(-40deg);
+}
+
+.slider{
+    position: absolute;
+    appearance: none;
+    transform: rotate(-90deg);
+    background-color: black;
+    border: solid 4px rgb(87, 77, 65); 
+    width: 99px;
+    height: 9px;
+    left: 78.3%;
+    bottom: 60%;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 13px;
+    width: 12px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.play-button{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: solid 2px  rgb(87, 77, 65);
+    position: absolute;
+    top: 65%;
+    left: 84%;
+}
+
+.play {
+    transform: rotate(30deg);
+    transform-origin: top;
+    transition: 1s;
+}
+
+.on {
+    animation: 3s spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100% {
+        transform: rotate(360deg);
+    }
+}
