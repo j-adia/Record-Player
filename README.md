@@ -5,3 +5,4 @@ A mini record player, just like the title says!
 * Plays music that you import from YouTube (feature in development)
 * Spinning record animation
 * Tone-arm animation
+* Volume slider
